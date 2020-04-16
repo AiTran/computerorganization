@@ -1,0 +1,2 @@
+1582012142 /home/Ai/Computer_Organization/Computer_Organization/hw1_trafficlight/P76087081/src/traffic_light_tb.v
+1582203357 /home/Ai/Computer_Organization/Computer_Organization/hw1_trafficlight/P76087081/src/traffic_light.v

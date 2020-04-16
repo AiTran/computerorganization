@@ -1,0 +1,69 @@
+ncverilog(64): 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
+TOOL:	ncverilog	14.10-s005: Started on Feb 20, 2020 at 20:56:01 CST
+ncverilog
+	-f file.v
+		traffic_light_tb.v
+		traffic_light.v
+		+nc64bit
+		+access+r
+		+define+FSDB
+file: traffic_light_tb.v
+	module worklib.traffic_light_tb:v
+		errors: 0, warnings: 0
+file: traffic_light.v
+	module worklib.traffic_light:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: ..........
+    $readmemb(`ANSTXT, ans);
+                         |
+ncelab: *W,MEMODR (./traffic_light_tb.v,76|25): $readmem default memory order incompatible with IEEE1364.
+.......... Done
+	Generating native compiled code:
+		worklib.traffic_light:v <0x15f94cb4>
+			streams:   5, words:  4570
+		worklib.traffic_light_tb:v <0x5d3234d0>
+			streams:  13, words: 14424
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  2       2
+		Registers:               12      12
+		Scalar wires:             6       -
+		Vectored wires:           1       -
+		Always blocks:            7       7
+		Initial blocks:           5       5
+		Cont. assignments:        2       4
+		Pseudo assignments:       1       1
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.traffic_light_tb:v
+Loading snapshot worklib.traffic_light_tb:v .................... Done
+*Verdi* Loading libsscore_ius141.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux x86_64/64bit, 08/30/2018
+(C) 1996 - 2018 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'triffic_light.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+
+
+        ****************************               
+        **                        **       /|__/|  
+        **  Congratulations !!    **      / O,O  | 
+        **                        **    /_____   | 
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        *************** ************   \m___m__|_|
+
+
+Simulation complete via $finish(1) at time 81921 NS + 0
+./traffic_light_tb.v:81     $finish;
+ncsim> exit
+TOOL:	ncverilog	14.10-s005: Exiting on Feb 20, 2020 at 20:56:02 CST  (total: 00:00:01)
