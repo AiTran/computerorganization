@@ -23,7 +23,7 @@ pascal:
     jal pascal 
     sw $v0,0x4($sp)
     #call pascal(n-1,m)
-    addi $a0,$a0,1 
+    addi $a1,$a1,1 
     jal pascal 
     #get result
     lw $t0,0x4($sp)
